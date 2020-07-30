@@ -62,3 +62,9 @@ search.addEventListener('input', function (e) {
 		}
 	})
 })
+
+/* --------Scroll-Down button--------- */
+const downScroll = document.querySelector('.down-scroll')
+downScroll.addEventListener('click', function (e) {
+	window.scrollTo(0, document.body.scrollHeight);
+})

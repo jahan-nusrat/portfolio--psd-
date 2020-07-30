@@ -287,3 +287,9 @@ header {
     transform: scale(1);
     opacity: 1;
 }
+
+.input-group-text {
+    background-color: #1DBE9C;
+    color: #fff;
+    border: 1px solid #1DBE9C;
+}
