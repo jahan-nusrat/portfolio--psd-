@@ -43,3 +43,22 @@ filterBtn.forEach(button => {
 		})
 	})
 })
+
+/* --------Filter Search Box--------- */
+const form = document.querySelector('form')
+form.addEventListener('click', function (event) {
+	event.preventDefault()
+})
+
+const search = document.querySelector('#search-item')
+search.addEventListener('input', function (e) {
+	e.preventDefault()
+	const searchFilter = e.target.value.toLowerCase().trim()
+	img.forEach(img => {
+		if (img.dataset.item.includes(searchFilter)) {
+			img.style.display = 'block'
+		} else {
+			img.style.display = 'none';
+		}
+	})
+})
