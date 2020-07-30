@@ -24,3 +24,22 @@ window.addEventListener('scroll', function () {
 });
 
 /* -------Isotope Filter--------- */
+const filterBtn = document.querySelectorAll('.btn-filter')
+const img = document.querySelectorAll('.img')
+filterBtn.forEach(button => {
+	button.addEventListener('click', function (e) {
+		e.preventDefault()
+		const filter = e.target.dataset.filter;
+		img.forEach(img => {
+			if (filter === 'all') {
+				img.style.display = 'block'
+			} else {
+				if (img.classList.contains(filter)) {
+					img.style.display = 'block'
+				} else {
+					img.style.display = 'none'
+				}
+			}
+		})
+	})
+})
