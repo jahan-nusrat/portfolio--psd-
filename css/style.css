@@ -76,6 +76,7 @@ header {
     background: #ffb233;
     padding: 0.3rem;
     border-radius: 50%;
+    border: none;
 }
 
 .down-scroll ion-icon {
@@ -83,6 +84,10 @@ header {
     color: #fff;
     display: inline-block;
     vertical-align: middle;
+}
+
+.down-scroll:focus {
+    outline: none;
 }
 
 /* About Me */
@@ -262,6 +267,10 @@ header {
     background-color: #1DBE9C;
 }
 
+.portfolio ul .active {
+    color: #FFB233;
+}
+
 .image {
     padding: 0 0.4rem !important;
 }
@@ -269,6 +278,7 @@ header {
 .img {
     margin-bottom: 0.9rem;
     position: relative;
+    animation: show 0.5s ease;
 }
 
 .overlay {
@@ -292,4 +302,17 @@ header {
     background-color: #1DBE9C;
     color: #fff;
     border: 1px solid #1DBE9C;
+}
+
+@keyframes show {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
 }
